@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivium - Building a Better Future</title>
+    <meta name="description" content="Trivium - Building a Better Future. We help you create sustainable, innovative solutions for tomorrow's challenges.">
+    <meta name="keywords" content="Trivium, innovation, sustainability, technology, consulting, digital transformation">
+    <meta name="author" content="Trivium Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trivium-demo.netlify.app/">
+    <meta property="og:title" content="Trivium - Building a Better Future">
+    <meta property="og:description" content="We help you create sustainable, innovative solutions for tomorrow's challenges">
+    <meta property="og:image" content="https://trivium-demo.netlify.app/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://trivium-demo.netlify.app/">
+    <meta property="twitter:title" content="Trivium - Building a Better Future">
+    <meta property="twitter:description" content="We help you create sustainable, innovative solutions for tomorrow's challenges">
+    <meta property="twitter:image" content="https://trivium-demo.netlify.app/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+    
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

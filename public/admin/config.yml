@@ -1,0 +1,59 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home Page Content"
+        file: "content/home.md"
+        fields:
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "string"}
+          - {label: "Hero Description", name: "hero_description", widget: "text"}
+          - {label: "Hero Video URL", name: "hero_video", widget: "string"}
+          - {label: "About Title", name: "about_title", widget: "string"}
+          - {label: "About Subtitle", name: "about_subtitle", widget: "text"}
+          - {label: "About Content", name: "about_content", widget: "markdown"}
+          - {label: "Services Title", name: "services_title", widget: "string"}
+          - {label: "Services Subtitle", name: "services_subtitle", widget: "text"}
+          - {label: "Contact Title", name: "contact_title", widget: "string"}
+          - {label: "Contact Description", name: "contact_description", widget: "text"}
+          - {label: "Map Embed URL", name: "map_url", widget: "string"}
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "navigation"
+        label: "Navigation"
+        file: "content/navigation.md"
+        fields:
+          - {label: "Logo Text", name: "logo", widget: "string"}
+          - label: "Navigation Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - {label: "Link URL", name: "href", widget: "string"}
+              - {label: "Link Text", name: "text", widget: "string"}
+
+      - name: "footer"
+        label: "Footer"
+        file: "content/footer.md"
+        fields:
+          - {label: "Logo Text", name: "logo", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Copyright", name: "copyright", widget: "string"}
+
+      - name: "meta"
+        label: "Site Meta"
+        file: "content/meta.md"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string"}
+          - {label: "Site Description", name: "description", widget: "text"}
+          - {label: "Keywords", name: "keywords", widget: "string"}
+          - {label: "Author", name: "author", widget: "string"}
